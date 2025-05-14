@@ -1,0 +1,23 @@
+@charset "UTF-8";
+
+section{
+	padding-bottom: 20px;
+	min-height: 400px;
+	background-color: rgb(225 226 247);
+	text-align: center;
+}
+
+body{
+	margin: 0 auto;
+	width: 1000px;
+}
+	
+h1, h3, table, td, th,tr{
+	margin:0;
+	padding:0;
+}
+
+.home{
+	line-height: 50px;
+}
+	

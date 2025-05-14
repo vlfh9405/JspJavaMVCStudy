@@ -1,0 +1,33 @@
+@charset "UTF-8";
+
+
+html, body, ol, ul, li, div, span, header, footer, section, ariticle,
+h1, h2, h3, h4, h5, h6, p, a, img, hr, input, form, button,
+table,tr, td, th, tbody, br{
+	margin : 0;
+	padding : 0;
+}
+
+body{
+	width: 600px;
+	margin: 0 auto;
+	padding: 0;
+}
+
+ul, li {
+	list-style: none;
+}
+
+a {
+	text-decoration: none;
+	color: black;
+}
+
+a:visited {
+	text-decoration: none;
+	color: black;
+}
+
+img {
+	border: none;
+}
