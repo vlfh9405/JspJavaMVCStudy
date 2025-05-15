@@ -42,7 +42,7 @@ public class StudentDao {
 		
 		try {
 			con = MyDBConnection.getConnection();
-			PreparedStatement pstmt = con.prepareStatement(sql);
+			pstmt = con.prepareStatement(sql);
 			rs = pstmt.executeQuery();
 			while(rs.next()) {
 				Student student = new Student();
@@ -59,4 +59,34 @@ public class StudentDao {
 		}
 		return students;
 	}// end of findAll;
+	
+	public void update(Student student) {
+		String sql = "update student set email = ? ,name = ? where = ?";
+		con = MyDBConnection.getConnection();
+		try {
+			pstmt = con.prepareStatement(sql);
+			pstmt.setString(1, student.getEmail());
+			pstmt.setString(2, student.getName());
+			pstmt.setInt(3,student.getId());
+			pstmt.executeUpdate();
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+	}
+	
+	public Student updatePage(int id) {
+		Student student = new Student();
+		String sql = "select * from student where id = ?";
+		con = MyDBConnection.getConnection();
+		try {
+			pstmt = con.prepareStatement(sql);
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		
+		
+		return student;
+	}
 }

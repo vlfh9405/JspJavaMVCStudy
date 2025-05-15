@@ -2,10 +2,12 @@ package controller;
 
 
 import java.io.IOException;
+
 import java.util.ArrayList;
 import java.util.List;
 
 import controller.dao.StudentDao;
+
 import controller.dto.Student;
 import jakarta.servlet.ServletConfig;
 import jakarta.servlet.ServletException;
@@ -19,7 +21,7 @@ public class StudentController extends HttpServlet{
 	private static final long serialVersionUID = 1L;
 	
 	StudentDao dao;
-	// 처음 한 번만 실행 시킨다. = 준비 
+	
 	public void init(ServletConfig config) throws ServletException  {
 		super.init(config);
 		dao = new StudentDao();
@@ -38,6 +40,7 @@ public class StudentController extends HttpServlet{
 			switch(action) {
 				case "list" : view = list(request,response); break; 
 				case "insert" : view = insert(request,response); break; 
+				case "updatePage" : updatePage(request,response); break;
 				case "send" : view = "studentInsert.jsp"; 
 			}
 			
@@ -45,6 +48,12 @@ public class StudentController extends HttpServlet{
 		}
 	}
 	
+	private String updatePage(HttpServletRequest request, HttpServletResponse response) {
+		request.setAttribute("student", dao.findAll());
+		return "studentInfo.jsp";
+		
+	}
+
 	//학생을 추가할 수 있도록 처리
 	private String insert(HttpServletRequest request, HttpServletResponse response) {
 		// 새로운 학생을 등록 한다. => 컨트롤러 -> dao의 Insert() 메서드를 호출한다.
