@@ -142,7 +142,7 @@
              Note: The pattern used is equivalent to using pattern="common" -->
         <Valve className="org.apache.catalina.valves.AccessLogValve" directory="logs" pattern="%h %l %u %t &quot;%r&quot; %s %b" prefix="localhost_access_log" suffix=".txt"/>
 
-      <Context docBase="myShop" path="/myShop" reloadable="true" source="org.eclipse.jst.jee.server:myShop"/><Context docBase="myProgram" path="/myProgram" reloadable="true" source="org.eclipse.jst.jee.server:myProgram"/><Context docBase="MVCStudy" path="/MVCStudy" reloadable="true" source="org.eclipse.jst.jee.server:MVCStudy"/></Host>
+      <Context docBase="myProgram" path="/myProgram" reloadable="true" source="org.eclipse.jst.jee.server:myProgram"/><Context docBase="myFirstApp" path="/myFirstApp" reloadable="true" source="org.eclipse.jst.jee.server:myFirstApp"/><Context docBase="myShop" path="/myShop" reloadable="true" source="org.eclipse.jst.jee.server:myShop"/><Context docBase="MVCStudy" path="/MVCStudy" reloadable="true" source="org.eclipse.jst.jee.server:MVCStudy"/><Context docBase="MVCStudyMap" path="/MVCStudyMap" reloadable="true" source="org.eclipse.jst.jee.server:MVCStudyMap"/><Context docBase="MVCmap" path="/MVCmap" reloadable="true" source="org.eclipse.jst.jee.server:MVCmap"/><Context docBase="MVCProjectExam" path="/MVCProjectExam" reloadable="true" source="org.eclipse.jst.jee.server:MVCProjectExam"/><Context docBase="myBoard" path="/myBoard" reloadable="true" source="org.eclipse.jst.jee.server:myBoard"/></Host>
     </Engine>
   </Service>
 </Server>

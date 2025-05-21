@@ -29,11 +29,6 @@ public class Studentcontroller extends HttpServlet{
 		String view = "";
 		String action = request.getParameter("action");
 		
-		
-		
-		
-		
-		
 		if(action == null) {
 			getServletContext().getRequestDispatcher("/scontrol?action=list").forward(request, response);
 		}else{
